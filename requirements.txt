@@ -1,2 +1,2 @@
-phi
-streamlit
+phi==0.6.7
+streamlit==1.25.0
