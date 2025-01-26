@@ -1,12 +1,11 @@
 import streamlit as st
-import datetime
 from phi.agent import Agent
 from phi.model.groq import Groq
 from phi.tools.youtube_tools import YouTubeTools
 
 agent = Agent(
     name='Youtube Agent',
-    model=Groq(id='llama-3.3-70b-versatile'),
+    model=Groq(id='llama-3.3-70b-versatile',api_key=st.secrets['key']),
     instructions=["Generated detailed description on the gievn youtube video"],
     tools=[YouTubeTools()]
     # show_tool_calls=True,
