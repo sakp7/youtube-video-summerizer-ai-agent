@@ -6,7 +6,7 @@ from phi.tools.youtube_tools import YouTubeTools
 agent = Agent(
     name='Youtube Agent',
     model=Groq(id='llama-3.3-70b-versatile',api_key=st.secrets['key']),
-    instructions=["Generated detailed description on the gievn youtube video"],
+    instructions=["Generated detailed description on the given youtube video"],
     tools=[YouTubeTools()]
     # show_tool_calls=True,
     # markdown=True
